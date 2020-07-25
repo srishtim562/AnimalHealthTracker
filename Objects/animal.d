@@ -1,0 +1,10 @@
+.\objects\animal.o: animal.c
+.\objects\animal.o: C:\Keil_v5\ARM\INC\Philips\lpc214x.h
+.\objects\animal.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\animal.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\animal.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\animal.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\animal.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\animal.o: LCD.H
+.\objects\animal.o: 7seg.H
+.\objects\animal.o: uart.H

@@ -1,0 +1,26 @@
+Dependencies for Project 'Animal Health', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x559CFDE8)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 528"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\animal.c)(0x5EEDFD1D)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\animal.o --omf_browse .\objects\animal.crf --depend .\objects\animal.d)
+I (C:\Keil_v5\ARM\INC\Philips\lpc214x.h)(0x559CFE30)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB9D0A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB9D0A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB9D06)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB9D0A)
+I (LCD.H)(0x5EA05911)
+I (7seg.H)(0x5EA0599F)
+I (uart.H)(0x5EE63DEB)
+F (.\LCD.c)(0x5EE3869B)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\lcd.o --omf_browse .\objects\lcd.crf --depend .\objects\lcd.d)
+I (LCD.H)(0x5EA05911)
+I (C:\Keil_v5\ARM\INC\Philips\lpc214x.h)(0x559CFE30)
+F (.\7seg.c)(0x5EA059A9)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\7seg.o --omf_browse .\objects\7seg.crf --depend .\objects\7seg.d)
+I (7seg.H)(0x5EA0599F)
+I (C:\Keil_v5\ARM\INC\Philips\lpc214x.h)(0x559CFE30)
+F (.\uart.c)(0x5EE63DBE)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="528"-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (uart.H)(0x5EE63DEB)
+I (C:\Keil_v5\ARM\INC\Philips\lpc214x.h)(0x559CFE30)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB9D0A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB9D0A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB9D0A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB9D06)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB9D0A)
