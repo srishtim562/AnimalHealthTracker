@@ -1,0 +1,2 @@
+# AnimalHealthTracker
+This cloud based animal health tracker uses LPC-2148 and RaspberryPi microcontrollers. The main code is written in embedded C. The code for integration with the ThingSpeak Cloud is written in Python. The ThingShow mobile app is used to view the sensor parameters on a smartphone. Due to the covid-19 pandemic, I was unable to procure the hardware components and the sensors required, so, currently, the Python code sends dummy data to the cloud. Once the sensors are available, sensor data can be sent to the cloud.
