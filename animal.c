@@ -122,8 +122,8 @@ int main()
   
  // initialize the peripherals & the board GPIO
 	
-    Board_Init();
-    SystemInit();
+    	  Board_Init();
+    	  SystemInit();
 	  UART1_init();
 	  RTC_Init();
 	  timer1_Init(); 
@@ -134,14 +134,14 @@ int main()
 
 		
 	
-		rtc.hour = 17;rtc.min =  00;rtc.sec =  00;//5:00:00pm
+    rtc.hour = 17;rtc.min =  00;rtc.sec =  00;//5:00:00pm
     rtc.date = 20;rtc.month = 04;rtc.year = 2020;//15th April 2020
     RTC_SetDateTime(&rtc);  // comment this line after first use
 	
 	  GPS_Init();
 		UART0_init();
 	 
-	  while(1)
+    while(1)
     {
       RTC_GetDateTime(&rtc);//get current date & time stamp
 			sprintf((char *)msg,"time:%2d:%2d:%2d  Date:%2d/%2d/%2d \x0d\xa",(uint16_t)rtc.hour,(uint16_t)rtc.min,(uint16_t)rtc.sec,(uint16_t)rtc.date,(uint16_t)rtc.month,(uint16_t)rtc.year);
@@ -263,7 +263,7 @@ void Board_Init(void)
 	
 	IO0DIR |= 1 << 11; // RELAY IS CONNECTED TO P0.11
 	IO0DIR |= 1U << 31 | 0x00FF0000 | 1U << 30; // to set P0.16 to P0.23 as o/ps ,
-  IO1DIR |= 1U << 25 | 1U << 24;	              // to set P1.25 as o/p used for EN, P1.24 to enable sensor
+  	IO1DIR |= 1U << 25 | 1U << 24;	              // to set P1.25 as o/p used for EN, P1.24 to enable sensor
                                     // make D7 Led (P0.31) on off for testing	
 	PINSEL1 |= 0x00080000;			//P0.25 as DAC output: option 3 (bits 18, 19) for buzzer
 }
@@ -375,7 +375,7 @@ void beep(unsigned int val)
 
 void GPS(void)
 {
-	    UART0_SendString(GGA_String);
+	    		UART0_SendString(GGA_String);
 			UART0_SendString("\r\n");
 			UART0_SendString("UTC Time : ");
 			get_Time();
@@ -390,12 +390,12 @@ void GPS(void)
 			UART0_SendString("Longitude : ");
 			get_Longitude(GGA_Comma_Pointers[2]);
 			UART0_SendString(Longitude_Buffer);
-	    UART1_SendString(Longitude_Buffer);
+	    		UART1_SendString(Longitude_Buffer);
 			UART0_SendString("\r\n");
 			UART0_SendString("Altitude : ");
 			get_Altitude(GGA_Comma_Pointers[7]);
 			UART0_SendString(Altitude_Buffer);
-	    UART1_SendString(Altitude_Buffer);
+	    		UART1_SendString(Altitude_Buffer);
 			UART0_SendString("\r\n");		
 			UART0_SendString("\r\n");
 			memset(GGA_String, 0 , 150);
@@ -407,11 +407,11 @@ void GPS(void)
 
 void GPS_Init(void)
 {
-	  IsItGGAString = false;
-	  GGA_Index = 0;
-	  memset(GGA_String, 0 , 150);
-	  memset(Latitude_Buffer, 0 , 15);
-	  memset(Longitude_Buffer, 0 , 15);
+	  	IsItGGAString = false;
+	  	GGA_Index = 0;
+		memset(GGA_String, 0 , 150);
+	  	memset(Latitude_Buffer, 0 , 15);
+	  	memset(Longitude_Buffer, 0 , 15);
 		memset(Time_Buffer, 0 , 15);
 		memset(Altitude_Buffer, 0 , 8);
 		VICVectAddr0 = (unsigned) UART0_Interrupt;	// UART0 ISR Address 
@@ -536,7 +536,7 @@ void hrsense(void)
 				delay_ms(1); //wait 1msec
 				beatms++; //keep incrementing counter each 1ms
 			}
-			// beatms variable will now have time in ms between two high edge pulse
+			// beatms variable will now have time in ms between two high edge pulses
 
 			bpm = (float)60000/beatms; // see document of #1157 for this calculation
 			if(bpm > 200)
